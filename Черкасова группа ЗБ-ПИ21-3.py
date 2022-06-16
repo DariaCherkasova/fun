@@ -52,6 +52,7 @@ string=str(input())
 print(is_palindrome(string))
 
 def calculate(path2file):
+    f=open(path2file)
     d=path2file.readlines()
     s=''
     znak=''
@@ -82,15 +83,18 @@ def calculate(path2file):
         if znak=='%':
             answer+=str(int(chislo1)%int(chislo2))+','
     for i in range(len(answer)-1):
-        rezult+=answer[i]       
+        rezult+=answer[i]   
+    f.close()
     return rezult
-f=open('test_input_file_1.txt')
+
 print(calculate(f))
-f.close()
+
 
 def substring_slice(path2file_1,path2file_2):
-    f1=path2file_1.readlines()
-    f2=path2file_2.readlines()
+    f1=open(path2file_1)
+    f2=open(path2file_2)
+    f1=f1.readlines()
+    f2=f2.readlines()
     s=''
     end=''
     start=''
@@ -113,13 +117,11 @@ def substring_slice(path2file_1,path2file_2):
                 for g in range(len(a)):
                     answer=answer+a[start:end]+' '
                     break                   
-        n+=1               
+        n+=1      
+    f1.close()
+    f2.close()
     return answer
-f1=open('test_import_file_2_1.txt')
-f2=open('test_import_file_2_2.txt')
-print(substring_slice(f1,f2))
-f1.close()
-f2.close()
+
 
 import json
 def decode_ch(sting_of_elements):
