@@ -1,24 +1,25 @@
+
 def fact(x):
     if (x==1 or x==0) :
         return 1
     else:
          return x*fact(x-1)
-print('Введите x')
-x=int(input())
-print(fact(x))
+#print('Введите x')
+#x=int(input())
+#print(fact(x))
 
 def filter_even(li):
     list1=list(filter(lambda x: x%2==0,li))
     return list1
 s=[10,2,37,45,88,90,45379,678]
-print(filter_even(s))
+#print(filter_even(s))
 
 def square(li):
     list1=list(map(int,li))
     list2=list(map(lambda x: x*x,list1))
     return list2
 s=['1','2','40','80','16','9']
-print(square(s))
+#print(square(s))
 
 def bin_search(li,element):
     index=-1
@@ -29,9 +30,9 @@ def bin_search(li,element):
     if index==-1:
         return -1
 li=[1,6,17,28,56,90,106,345,5678,35670]
-print('Введите элемент, чтобы узнать его индекс')
+#print('Введите элемент, чтобы узнать его индекс')
 element=int(input())
-print(bin_search(li,element))
+#print(bin_search(li,element))
 
 def is_palindrome(string):
     s=''
@@ -47,9 +48,9 @@ def is_palindrome(string):
     else:
          a='NO'
     return a
-print('Введите строку ')
-string=str(input())
-print(is_palindrome(string))
+#print('Введите строку ')
+#string=str(input())
+#print(is_palindrome(string))
 
 def calculate(path2file):
     f=open(path2file)
@@ -86,8 +87,7 @@ def calculate(path2file):
         rezult+=answer[i]   
     f.close()
     return rezult
-
-print(calculate(f))
+#print(calculate(f))
 
 
 def substring_slice(path2file_1,path2file_2):
@@ -143,11 +143,9 @@ def decode_ch(sting_of_elements):
         answer+=periodic_table[i]
     return answer
 s='NOTiFICaTiON'
-print(decode_ch(s))
+#print(decode_ch(s))
 
 import statistics
-
-
 class Student:
     def __init__(self,name,surname,grades):
         self.name=name
@@ -175,12 +173,12 @@ list1=[3,3,4,5,5,3,3]
 list2=[4,5,5,5,5,5]
 s1=Student('Дамир','Стоноров',list1)
 s2=Student('Олег','Боярский',list2)
-print(s1)
+#print(s1)
 s1.greeting()
 s1.mean_grade()
-print()
-print(s2)
+#print()
+#print(s2)
 s2.greeting()
 s2.mean_grade()
-print()
-print(s1+s2)
+#print()
+#print(s1+s2)
